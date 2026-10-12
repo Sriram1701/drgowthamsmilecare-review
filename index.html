@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dr. Gowtham's Smile Care - Leave a Review</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Share your 5-star experience at Dr. Gowtham's Smile Care, Cuddalore. Fast, 1-tap Google Review generation for Kids & Family Dentistry.">
+    <meta name="keywords" content="Dr Gowtham Smile Care, Cuddalore Dentist, Dental Review, Kids Dentistry Cuddalore, Painless Root Canal">
+    <meta name="theme-color" content="#0d9488">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Ambient Accent Bar -->
+    <div class="top-accent-bar"></div>
+
+    <div class="page-container">
+        <!-- Floating Google Verified Badge -->
+        <div class="verified-badge-wrap">
+            <div class="verified-badge">
+                <svg class="g-icon" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                <span>Verified Google Business • 4.9 Rating</span>
+            </div>
+        </div>
+
+        <!-- Clinic Branding Header -->
+        <header class="brand-header">
+            <div class="logo-wrapper">
+                <img src="logo.jpg" alt="Dr. Gowtham's Smile Care Logo" class="clinic-logo" id="clinicLogo">
+            </div>
+            <h1 class="clinic-name" id="clinicName">Dr. Gowtham's Smile Care</h1>
+            <p class="clinic-tagline" id="clinicTagline">Kids &amp; Family Dentistry • Cuddalore</p>
+        </header>
+
+        <!-- Star Rating Section -->
+        <div class="rating-strip">
+            <div class="stars-row" id="starsRow" aria-label="5 Star Rating">
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+            </div>
+            <p class="rating-heading" id="ratingHeading">Share your treatment experience in 10 seconds!</p>
+        </div>
+
+        <!-- Treatment / Service Filter Pills -->
+        <div class="category-section">
+            <p class="section-label" id="serviceLabel">Select Treatment Received:</p>
+            <div class="category-scroll" id="catRow">
+                <button class="cat-pill active" data-cat="all" onclick="selectCat(this)" id="cat-all">
+                    <span class="pill-icon">⭐</span>
+                    <span class="pill-text">Overall Care</span>
+                </button>
+                <button class="cat-pill" data-cat="kids" onclick="selectCat(this)" id="cat-kids">
+                    <span class="pill-icon">👶</span>
+                    <span class="pill-text">Kids Dentistry</span>
+                </button>
+                <button class="cat-pill" data-cat="rct" onclick="selectCat(this)" id="cat-rct">
+                    <span class="pill-icon">🦷</span>
+                    <span class="pill-text">Root Canal (RCT)</span>
+                </button>
+                <button class="cat-pill" data-cat="scaling" onclick="selectCat(this)" id="cat-scaling">
+                    <span class="pill-icon">✨</span>
+                    <span class="pill-text">Cleaning &amp; Whitening</span>
+                </button>
+                <button class="cat-pill" data-cat="implants" onclick="selectCat(this)" id="cat-implants">
+                    <span class="pill-icon">🔩</span>
+                    <span class="pill-text">Dental Implants</span>
+                </button>
+                <button class="cat-pill" data-cat="braces" onclick="selectCat(this)" id="cat-braces">
+                    <span class="pill-icon">😬</span>
+                    <span class="pill-text">Braces &amp; Aligners</span>
+                </button>
+                <button class="cat-pill" data-cat="wisdom" onclick="selectCat(this)" id="cat-wisdom">
+                    <span class="pill-icon">🦷</span>
+                    <span class="pill-text">Wisdom Tooth</span>
+                </button>
+                <button class="cat-pill" data-cat="crown" onclick="selectCat(this)" id="cat-crown">
+                    <span class="pill-icon">👑</span>
+                    <span class="pill-text">Crown &amp; Bridge</span>
+                </button>
+                <button class="cat-pill" data-cat="painless" onclick="selectCat(this)" id="cat-painless">
+                    <span class="pill-icon">🩺</span>
+                    <span class="pill-text">Painless Treatment</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Multi-Language Selector -->
+        <div class="lang-selector-wrap">
+            <div class="lang-segmented-control english" id="langToggle">
+                <div class="lang-slider"></div>
+                <button class="lang-option-btn" data-lang="en" onclick="selectLang('en')" id="langBtnEn">English</button>
+                <button class="lang-option-btn" data-lang="ta" onclick="selectLang('ta')" id="langBtnTa">தமிழ்</button>
+                <button class="lang-option-btn" data-lang="tanglish" onclick="selectLang('tanglish')" id="langBtnTanglish">Tanglish</button>
+            </div>
+        </div>
+
+        <!-- AI Review Box Card -->
+        <main class="review-card-container">
+            <div class="review-glass-card">
+                <!-- Card Header Decoration -->
+                <div class="card-top-header">
+                    <div class="card-line"></div>
+                    <span class="card-eyebrow" id="cardLabelText">YOUR 5-STAR REVIEW</span>
+                    <div class="card-line right"></div>
+                </div>
+
+                <!-- Review Content Box -->
+                <div class="review-box" id="reviewBox">
+                    <div class="quote-mark">“</div>
+                    <div class="review-content" id="reviewText">Generating your personalized review...</div>
+                    <div class="quote-mark end">”</div>
+                </div>
+
+                <div class="card-gem-divider">
+                    <div class="divider-line"></div>
+                    <span class="gem-symbol">◆</span>
+                    <div class="divider-line right"></div>
+                </div>
+
+                <!-- Voice Recording Live Status Bar -->
+                <div class="voice-status-bar" id="voiceStatusBar" style="display: none;">
+                    <div class="mic-wave-wrap">
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                    </div>
+                    <span class="voice-status-text" id="voiceStatusText">Listening... Speak your review now</span>
+                    <button type="button" class="btn-stop-voice" id="btnStopVoice" onclick="stopVoiceInput()">Done ✓</button>
+                </div>
+
+                <!-- Action Button Row -->
+                <div class="cta-actions-row">
+                    <button class="btn-copy-review" id="btnCopy" onclick="copyAndGo()" aria-label="Copy review and open Google">
+                        <svg class="btn-svg-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span id="copyBtnText">Copy &amp; Paste on Google</span>
+                    </button>
+
+                    <!-- Voice Command / Speech-to-Text Button -->
+                    <button class="btn-voice-review" id="btnVoice" onclick="toggleVoiceInput()" title="Speak your review (Voice to Text)" aria-label="Voice Input">
+                        <svg class="mic-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                        </svg>
+                    </button>
+
+                    <!-- Review Shuffle Button -->
+                    <button class="btn-shuffle-review" id="btnRefresh" onclick="refreshReview()" title="Generate another review" aria-label="Shuffle review">
+                        <svg class="shuffle-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <p class="disclaimer-note" id="disclaimer">Tap button to copy review text and directly open our Google Reviews page.</p>
+            </div>
+        </main>
+
+        <!-- Quick Connect Icon Hub -->
+        <section class="quick-connect-hub">
+            <div class="connect-grid">
+                <!-- Save Contact -->
+                <div class="connect-item">
+                    <button class="connect-btn" onclick="saveContact()" id="btnSaveContact" aria-label="Save Clinic Contact">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <line x1="19" y1="8" x2="19" y2="14"></line>
+                            <line x1="22" y1="11" x2="16" y2="11"></line>
+                        </svg>
+                    </button>
+                    <span class="connect-label" id="lblSaveContact">Save<br>Contact</span>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="connect-item">
+                    <a class="connect-btn wa-btn" href="https://wa.me/919787807552?text=Hi%20Doctor%2C%20I%20would%20like%20to%20inquire%20about%20your%20availability%20and%20book%20an%20appointment." target="_blank" rel="noopener" id="btnWhatsapp" aria-label="WhatsApp Us">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                            <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.85-1.47A10 10 0 1 0 12 2zm0 18.15a8.1 8.1 0 0 1-4.15-1.14l-.298-.177-3.08.933.94-2.98-.194-.307A8.15 8.15 0 1 1 12 20.15z"/>
+                        </svg>
+                    </a>
+                    <span class="connect-label" id="lblWhatsapp">WhatsApp<br>Chat</span>
+                </div>
+
+                <!-- Call Us -->
+                <div class="connect-item">
+                    <a class="connect-btn call-btn" href="tel:+916374088810" id="btnCall" aria-label="Call Doctor">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </a>
+                    <span class="connect-label" id="lblCall">Call<br>Doctor</span>
+                </div>
+
+                <!-- Instagram -->
+                <div class="connect-item">
+                    <a class="connect-btn ig-btn" href="https://www.instagram.com/drgowthamsmilecare?igsh=Y3Z1Z2M0YTRkdHNr" target="_blank" rel="noopener" id="btnInstagram" aria-label="Instagram Profile">
+                        <svg viewBox="0 0 24 24" width="22" height="22">
+                            <defs>
+                                <radialGradient id="ig-gradient-icon" r="150%" cx="30%" cy="107%">
+                                    <stop offset="0%" stop-color="#fdf497" />
+                                    <stop offset="5%" stop-color="#fdf497" />
+                                    <stop offset="45%" stop-color="#fd5949" />
+                                    <stop offset="60%" stop-color="#d6249f" />
+                                    <stop offset="90%" stop-color="#285AEB" />
+                                </radialGradient>
+                            </defs>
+                            <path fill="url(#ig-gradient-icon)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <span class="connect-label" id="lblInstagram">Instagram<br>Page</span>
+                </div>
+
+                <!-- Facebook -->
+                <div class="connect-item">
+                    <a class="connect-btn fb-btn" href="https://www.facebook.com/profile.php?id=100064172136791" target="_blank" rel="noopener" id="btnFacebook" aria-label="Facebook Page">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="#1877F2">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <span class="connect-label" id="lblFacebook">Facebook<br>Page</span>
+                </div>
+            </div>
+
+            <!-- Clinic Address Box -->
+            <div class="clinic-location-box">
+                <div class="loc-pin-icon">📍</div>
+                <p class="loc-address-text">
+                    <strong>Dr. Gowtham's Smile Care</strong><br>
+                    43, Bashyam Street, Near Aruna Lab, Manjakuppam, Cuddalore, Tamil Nadu 607001
+                </p>
+            </div>
+
+            <!-- Interactive Map Embed -->
+            <div class="clinic-map-wrap">
+                <iframe 
+                    title="Dr. Gowtham's Smile Care Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.9082260654316!2d79.7571658!3d11.7501068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54992985172289%3A0x633513a968652932!2sDr.Gowtham&#39;s%20Smile%20Care!5e0!3m2!1sen!2sin!4v1718000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="190" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <p class="quick-instruction-hint" id="hint">Tap button above to copy review, then paste in Google!</p>
+        </section>
+
+        <!-- Doctors Profile Section -->
+        <section class="specialists-section">
+            <div class="specialist-eyebrow">
+                <div class="eyebrow-line"></div>
+                <span>MEET OUR SPECIALISTS</span>
+                <div class="eyebrow-line right"></div>
+            </div>
+            
+            <div class="specialist-cards-grid">
+                <!-- Dr. K. Gowtham -->
+                <div class="doctor-badge-card">
+                    <div class="doctor-avatar-wrap">
+                        <img src="sir.jpg" alt="Dr. K. Gowtham MDS" class="doctor-photo">
+                    </div>
+                    <div class="doctor-meta">
+                        <h3>Dr. K. Gowtham, MDS</h3>
+                        <div class="doctor-spec-tag">Periodontist &amp; Implantologist</div>
+                        <p class="doctor-desc">Specialist in advanced dental implants, painless laser gum surgery, cosmetic smile restoration, and single-visit root canals.</p>
+                    </div>
+                </div>
+
+                <!-- Dr. M. Adeline Genivie -->
+                <div class="doctor-badge-card">
+                    <div class="doctor-avatar-wrap">
+                        <img src="mam.jpg" alt="Dr. M. Adeline Genivie MDS" class="doctor-photo">
+                    </div>
+                    <div class="doctor-meta">
+                        <h3>Dr. M. Adeline Genivie, MDS</h3>
+                        <div class="doctor-spec-tag">Pediatric Dentist (Kids Specialist)</div>
+                        <p class="doctor-desc">Expert in gentle, fear-free kids dentistry, preventive cavity care, early braces alignment, and painless pulpectomy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clinic Highlights -->
+        <section class="clinic-info-section">
+            <div class="info-card">
+                <h2>Why Patients Love Dr. Gowtham's Smile Care</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="hi-icon">🦷</span>
+                        <div>
+                            <strong>100% Painless Technology</strong>
+                            <p>Advanced digital equipment and computer-controlled anesthesia for painless treatments.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="hi-icon">👶</span>
+                        <div>
+                            <strong>Kids-Friendly Atmosphere</strong>
+                            <p>Gentle pediatric care that eliminates dental fear for children of all ages.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="hi-icon">🔬</span>
+                        <div>
+                            <strong>World-Class Sterilization</strong>
+                            <p>Hospital-grade multi-tier hygiene protocols ensuring utmost safety for every patient.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="hi-icon">💰</span>
+                        <div>
+                            <strong>Ethical &amp; Transparent Pricing</strong>
+                            <p>Clear consultation and affordable family dental care with zero hidden costs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timings-box">
+                    <strong>⏰ Clinic Timings:</strong><br>
+                    <span>Monday - Saturday: 9:30 AM – 8:30 PM</span><br>
+                    <span>Sunday: 10:00 AM – 1:00 PM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; 2026 Dr. Gowtham's Smile Care. All rights reserved.</p>
+            <p class="footer-sub">Smart Google Review Portal • Developed for NFC Tap &amp; QR Scan</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification Element -->
+    <div class="toast-popup" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-msg" id="toastMsg">Review copied! Opening Google...</span>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
+</body>
+</html>
